@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+body {
+    height: 100vh;
+    background-color: hsl(144deg 6% 85%);
+}
+
+.bg-green {
+    background-color: hsl(174deg 100% 29%);
+    height: 100px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+}
+
+/* MAIN */
+
+.tools {
+    display: inline-block;
+    width: 20%;
+    color: hsl(0deg 0% 69%);
+}
+
+.fas {
+    margin-right: 10px;
+}
+
+.fas:hover {
+    cursor: pointer;
+}
+
+/* utenti */
+
+.utenti {
+    width: 30%;
+    display: inline-block;
+}
+
+.main-user {
+    background-color: hsl(0deg 0% 92%);
+    padding: 10px;
+}
+
+.user {
+    display: inline-block;
+    width: 79%;
+}
+
+.image {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.notifiche {
+    background-color: hsl(198deg 93% 77%);
+}
+
+a {
+    color: hsl(198deg 30% 53%);
+}
+
+.search {
+    background-color: hsl(0deg 0% 92%);
+    padding: 5px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 7px;
+    border: 1px solid hsl(0deg 0% 92%);
+}
+
+.chat {
+    background-color: hsl(0deg 0% 100%);
+    padding: 7px;
+}
+
+.chat:hover {
+    background-color: hsl(150deg 5% 92%);
+    cursor: pointer;
+}
+
+/* current-chat */
+.current-chat {
+    width: 70%;
+    display: inline-block;
+}
+
+.top-chat {
+    background-color: hsl(0deg 0% 92%);
+}
+
+.chat-attiva {
+    height: 400px;
+    background-image: url("/img/mine.jpg");
+}
+
+.nome-utente {
+    display: inline;
+}
+
+.msg-utente {
+    background-color: hsl(94deg 84% 85%);
+}
+
+.msg-cpu {
+    background-color: hsl(0deg 0% 100%);
+}
