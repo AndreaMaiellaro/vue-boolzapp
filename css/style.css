@@ -22,6 +22,10 @@ body {
     vertical-align: 15px;
 }
 
+.align {
+    vertical-align: 25px;
+}
+
 /* MAIN */
 
 .tools {
@@ -108,24 +112,47 @@ a {
 
 .top-chat {
     background-color: hsl(0deg 0% 92%);
+    padding: 10px;
+}
+
+.big-nome {
+    width: 79%;
+    display: inline-block;
 }
 
 .chat-attiva {
-    height: calc( 100% - 77px);
+    height: calc( 100% - 15%);
     overflow: hidden;
-    background-image: url("/img/mine.jpg");
+    background-image: url("../img/mine.jpg");
+    padding-top: 20px;
 }
 
 .nome-utente {
     display: inline;
 }
 
+.right {
+    vertical-align: 15px;
+    text-align: right;
+}
+
 .msg-utente {
     background-color: hsl(94deg 84% 85%);
+    overflow: hidden;
+    max-width: 300px;
+    margin-right: 10%;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .msg-cpu {
     background-color: hsl(0deg 0% 100%);
+    overflow: hidden;
+    max-width: 300px;
+    margin-left: 10%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .chat-text {
@@ -135,9 +162,10 @@ a {
 }
 
 .chat-text input {
-    padding: 10px;
+    padding: 12px;
     width: 80%;
     display: inline-block;
+    border: 1px solid hsl(27deg 27% 94%);
 }
 
 .emoji {

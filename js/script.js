@@ -63,4 +63,10 @@ var app = new Vue({
             ],
         },
     ],
+    avatars: [
+        'img/avatar_2',
+        'img/avatar_3',
+        'img/avatar_4',
+        'img/avatar_5',
+    ]
 })
