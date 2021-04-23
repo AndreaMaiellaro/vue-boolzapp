@@ -159,8 +159,8 @@ a {
 }
 
 .msg {
-    max-width: 500px;
-    min-width: 250px;
+    max-width: 600px;
+    min-width: 200px;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -171,12 +171,19 @@ a {
     background-color: hsl(94deg 84% 85%);
     float: right;
     margin-right: 10%;
+    position: relative;
 }
 
 .received {
     background-color: hsl(0deg 0% 100%);
     margin-left: 10%;
     float: left;
+}
+
+.msg-date {
+    color: lightgray;
+    font-size: 12px;
+    position: absolute;
 }
 
 .chat-text {

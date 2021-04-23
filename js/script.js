@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#root',
     data: {
-        activeContact: 2,
+        activeContact: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -92,8 +92,13 @@ var app = new Vue({
     methods: {
         setActiveContact(index) {
             this.activeContact = index;
-        }
+        },
 
-        
-    }
+        addNewMsg() {
+            if (this.userNewMsg.length > 0) {
+                this.todos.push(this.userNewMsg)
+                this.userNewMsg = '';
+            }
+        },
+    },
 });

@@ -76,14 +76,22 @@
                     </div>                    
                     <div class="chat-attiva">
                         <div v-for="message in contacts[activeContact].messages" class="msg" :class="message.status">
-                            <div class="msg-text">{{ message.text }}</div>
+                            <div class="msg-text">
+                                {{ message.text }}
+                                <span class="msg-date">
+                                    {{ message.date }}
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="chat-text">
                         <div class="emoji">
                             <i class="far fa-smile"></i>
                         </div>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text"
+                        v-model="userNewMsg" 
+                        @keyup.enter="addNewMsg" 
+                        placeholder="Scrivi un messaggio">
                         <div class="mic">
                             <i class="fas fa-microphone"></i>
                         </div>
