@@ -29,6 +29,9 @@
                         </div>
                     </div>
                     <div class="notifiche">
+                        <div class="bell">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
                         <span>Ricevi notifiche di nuovi messaggi</span>
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
@@ -36,12 +39,19 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="chats">
-                        <div class="chat">
-                            <img class="image" src="img/avatar_1.jpg" alt="#">
-                            <span class="align">Michele</span>
+                        <!-- contatto -->
+                        <div v-for="contact in contacts" class="chat active">
+                            <div class="avatar">
+                                <img class="image" :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
+                            </div>
+                            
+                            <div class="infos">
+                                <span class="align">{{ contact.name }}</span>
+                            </div>
                         </div>
-                        </div>
+                        <!-- fine contatto -->
                     </div>
+        
                 </div>
 
                 <div class="current-chat">

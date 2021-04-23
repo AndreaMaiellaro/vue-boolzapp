@@ -44,7 +44,7 @@ body {
 
 .far:hover {
     cursor: pointer;
-} 
+}
 
 /* utenti */
 
@@ -72,6 +72,21 @@ body {
 .notifiche {
     padding: 10px;
     background-color: hsl(198deg 93% 77%);
+    display: flex;
+}
+
+.bell {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.notifiche .bell i {
+    line-height: 40px;
+    color: hsl(198deg 93% 77%);
 }
 
 a {
@@ -95,6 +110,11 @@ a {
     background-color: hsl(0deg 0% 100%);
     border-bottom: 1px solid lightgray;
     padding: 7px;
+    display: flex;
+}
+
+.active {
+    background-color: lightgray;
 }
 
 .chat:hover {
@@ -106,7 +126,9 @@ a {
 .current-chat {
     width: 70%;
     background-color: white;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     border-left: 1px solid lightgray;
 }
 
@@ -121,8 +143,8 @@ a {
 }
 
 .chat-attiva {
-    height: calc( 100% - 15%);
-    overflow: hidden;
+    flex-grow: 1;
+    overflow-y: auto;
     background-image: url("../img/mine.jpg");
     padding-top: 20px;
 }
@@ -158,7 +180,7 @@ a {
 .chat-text {
     background-color: hsl(27deg 27% 94%);
     padding: 10px;
-    display: block;
+    display: flexbox;
 }
 
 .chat-text input {
