@@ -89,4 +89,11 @@ var app = new Vue({
         ]
         
     },
-})
+    methods: {
+        setActiveContact(index) {
+            this.activeContact = index;
+        }
+
+        
+    }
+});

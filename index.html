@@ -40,7 +40,13 @@
                     </div>
                     <div class="chats">
                         <!-- contatto -->
-                        <div v-for="(contact, index) in contacts" class="chat" :class="{'active' : index == activeContact}">
+                        <div 
+                            v-for="(contact, index) in contacts" 
+                            class="chat" 
+                            :class="{'active' : index == activeContact}"
+                            @click="setActiveContact(index)"
+                        >
+
                             <div class="avatar">
                                 <img class="image" :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
                             </div>
