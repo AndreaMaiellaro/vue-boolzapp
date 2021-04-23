@@ -40,7 +40,7 @@
                     </div>
                     <div class="chats">
                         <!-- contatto -->
-                        <div v-for="contact in contacts" class="chat active">
+                        <div v-for="(contact, index) in contacts" class="chat" :class="{'active' : index == activeContact}">
                             <div class="avatar">
                                 <img class="image" :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
                             </div>
@@ -58,8 +58,8 @@
                     <div class="top-chat">
                         <div class="nome-utente">
                             <div class="big-nome">
-                                <img class="image" src="img/avatar_1.jpg" alt="#">
-                                <span class="align">Michele</span>
+                                <img class="image" :src="'img/avatar${contacts[activeContact].avatar}.jpg'" :alt="contacts[activeContact].name">
+                                <span class="align">{{ contacts[activeContact].name }}</span>
                             </div>
                         </div>
                         <div class="tools right">
@@ -69,8 +69,10 @@
                         </div>
                     </div>                    
                     <div class="chat-attiva">
-                        <div class="msg-utente">asdfsdaf</div>
-                        <div class="msg-cpu">DFASDF</div>
+                        <div v-for="message in contacts[activeContact].messages" class="msg-sent" :class="message.status">
+                            <div class="msg-text">{{ message.text }}</div>
+                            <!-- <div class="msg-received">DFASDF</div> -->
+                        </div>
                     </div>
                     <div class="chat-text">
                         <div class="emoji">

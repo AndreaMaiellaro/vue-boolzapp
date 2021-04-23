@@ -158,29 +158,28 @@ a {
     text-align: right;
 }
 
-.msg-utente {
-    background-color: hsl(94deg 84% 85%);
-    overflow: hidden;
+.msg {
     max-width: 300px;
-    margin-right: 10%;
-    margin-left: auto;
+    min-width: 100px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.msg-cpu {
+.sent {
+    background-color: hsl(94deg 84% 85%);
+    float: right;
+    margin-right: 10%;
+}
+
+.received {
     background-color: hsl(0deg 0% 100%);
-    overflow: hidden;
-    max-width: 300px;
     margin-left: 10%;
-    padding: 10px;
-    border-radius: 10px;
+    float: left;
 }
 
 .chat-text {
     background-color: hsl(27deg 27% 94%);
     padding: 10px;
-    display: flexbox;
 }
 
 .chat-text input {
