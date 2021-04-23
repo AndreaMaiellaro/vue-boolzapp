@@ -159,10 +159,12 @@ a {
 }
 
 .msg {
-    max-width: 300px;
-    min-width: 100px;
+    max-width: 500px;
+    min-width: 250px;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    clear: both;
 }
 
 .sent {

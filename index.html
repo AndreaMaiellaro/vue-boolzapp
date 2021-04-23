@@ -69,9 +69,8 @@
                         </div>
                     </div>                    
                     <div class="chat-attiva">
-                        <div v-for="message in contacts[activeContact].messages" class="msg-sent" :class="message.status">
+                        <div v-for="message in contacts[activeContact].messages" class="msg" :class="message.status">
                             <div class="msg-text">{{ message.text }}</div>
-                            <!-- <div class="msg-received">DFASDF</div> -->
                         </div>
                     </div>
                     <div class="chat-text">
