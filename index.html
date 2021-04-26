@@ -36,11 +36,11 @@
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
                     <div class="search">
-                        <input 
+                        <input
                         type="text" 
                         placeholder="Cerca o inizia una nuova chat"
                         v-model="userFilter"
-                        @keyup=""
+                        @keyup="filterContacts"
                         >
                     </div>
                     <div class="chats">
@@ -85,6 +85,13 @@
                         class="msg" 
                         :class="message.status"
                         >
+                            <div class="menu-tendina">
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="menu">
+                                    <li>Message Info</li>
+                                    <li>Delete message</li>
+                                </div>
+                            </div>
                             <div class="msg-text">
                                 {{ message.text }}
                                 <span class="msg-date">

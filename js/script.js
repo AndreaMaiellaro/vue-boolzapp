@@ -2,7 +2,8 @@ var app = new Vue({
     el: '#root',
     data: {
         activeContact: 0,
-        // newMsg= '',
+        newMsg: '',
+        userFilter: '',
         contacts: [
             {
                 name: 'Michele',
@@ -98,7 +99,7 @@ var app = new Vue({
         addNewMsg() {
            const newMsgObj = {
             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-            text: '',
+            text: this.newMsg,
             status: 'sent'
             }
 
