@@ -122,10 +122,10 @@ var app = new Vue({
         },
 
         filterContacts() {
-            const userFilterLowercase = this.userFilter.toLowercase();
+            const userFilterLowercase = this.userFilter.toLowerCase();
             
             this.contacts.forEach((contact) => {
-                const contactNameLowercase = contact.name.toLowercase();
+                const contactNameLowercase = contact.name.toLowerCase();
             
                 if ( contactNameLowercase.includes(userFilterLowercase)) {
                     contact.visible = true;
