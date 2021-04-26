@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#root',
     data: {
         activeContact: 0,
+        // newMsg= '',
         contacts: [
             {
                 name: 'Michele',
@@ -95,10 +96,42 @@ var app = new Vue({
         },
 
         addNewMsg() {
-            if (this.userNewMsg.length > 0) {
-                this.todos.push(this.userNewMsg)
-                this.userNewMsg = '';
+           const newMsgObj = {
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            text: '',
+            status: 'sent'
             }
+
+            this.contacts[this.activeContact].messages.push(newMsgObj);
+
+            this.newMsg = '';
+
+            //msg cpu
+
+            setTimeout(() => {
+                const newMsgCpu = {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'Ok',
+                    status: 'received'
+                }
+
+                this.contacts[this.activeContact].messages.push(newMsgCpu);
+
+            }, 1000)
+        },
+
+        filterContacts() {
+            const userFilterLowercase = this.userFilter.toLowercase();
+            
+            this.contacts.forEach((contact) => {
+                const contactNameLowercase = contact.name.toLowercase();
+            
+                if ( contactNameLowercase.includes(userFilterLowercase)) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
         },
     },
 });
